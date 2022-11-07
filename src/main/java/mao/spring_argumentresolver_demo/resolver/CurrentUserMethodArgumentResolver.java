@@ -42,7 +42,6 @@ public class CurrentUserMethodArgumentResolver implements HandlerMethodArgumentR
                                   NativeWebRequest webRequest,
                                   WebDataBinderFactory binderFactory) throws Exception
     {
-        System.out.println("参数解析器...");
         //此处直接模拟了一个User对象，实际项目中可能需要从请求头中获取登录用户的令牌然后进行解析，
         //最终封装成User对象返回即可，这样在Controller的方法形参就可以直接引用到User对象了
         User user = new User(1L, "张三");
