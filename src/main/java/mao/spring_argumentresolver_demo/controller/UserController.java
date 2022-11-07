@@ -1,5 +1,6 @@
 package mao.spring_argumentresolver_demo.controller;
 
+import mao.spring_argumentresolver_demo.CurrentUser;
 import mao.spring_argumentresolver_demo.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,7 @@ public class UserController
 
     //获取当前系统登录用户
     @GetMapping("/getCurrentUser")
-    public String getCurrentUser(User user)
+    public String getCurrentUser(@CurrentUser User user)
     {
         log.info(user.toString());
         return user.toString();
